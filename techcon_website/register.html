@@ -1,87 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /> <!-- Use UTF-8 to ensure correct character rendering :contentReference[oaicite:6]{index=6} -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive design for mobile devices :contentReference[oaicite:7]{index=7} -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register for TechCon 2024</title>
   <style>
-    /* Basic focus indicator enhancement for keyboard navigation :contentReference[oaicite:8]{index=8} */
+    /* Basic focus indicator enhancement for keyboard navigation */
     input:focus, textarea:focus, button:focus {
       outline: 3px solid #0066cc;
       outline-offset: 2px;
     }
+    
     /* Simple layout for form fields */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    
+    header {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    header h1 {
+      margin: 0 0 1rem 0;
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: #0066cc;
+      padding: 0.5rem;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    main {
+      padding: 2rem;
+    }
+    
     form {
       max-width: 600px;
-      margin: 1em auto;
-      padding: 1em;
+      margin: 0 auto;
+      padding: 2rem;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 8px;
+      background-color: #fafafa;
     }
+    
     fieldset {
-      margin-bottom: 1em;
-      padding: 1em;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
       border: 1px solid #aaa;
       border-radius: 4px;
+      background-color: white;
     }
-    fieldset legend {
+    
+    legend {
       font-weight: bold;
-      padding: 0 0.5em;
+      padding: 0 0.5rem;
+      color: #333;
     }
+    
     label {
       display: block;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.5rem;
       font-weight: bold;
+      color: #333;
     }
+    
     input[type="text"],
     input[type="email"],
     input[type="password"] {
       width: 100%;
-      padding: 0.5em;
-      margin-bottom: 1em;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 4px;
+      font-size: 1rem;
+      box-sizing: border-box;
     }
+    
     input[type="checkbox"] {
-      margin-right: 0.5em;
+      margin-right: 0.5rem;
     }
+    
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      font-weight: normal;
+    }
+    
     button[type="submit"] {
-      padding: 0.6em 1.2em;
-      font-size: 1em;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
       border: none;
       background-color: #0066cc;
       color: white;
       border-radius: 4px;
       cursor: pointer;
+      width: 100%;
+      margin-top: 1rem;
     }
+    
     button[type="submit"]:hover {
       background-color: #004999;
+    }
+    
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <!-- Header with page title and consistent navigation -->
   <header>
-    <h1>Register for TechCon 2024</h1> <!-- Primary heading for registration page :contentReference[oaicite:9]{index=9} -->
-    <nav aria-label="Main Navigation"> <!-- Landmark navigation for assistive technologies :contentReference[oaicite:10]{index=10} -->
+    <h1>Register for TechCon 2024</h1>
+    <nav aria-label="Main Navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>      <!-- Link to Home :contentReference[oaicite:11]{index=11} -->
-        <li><a href="about.html">About</a></li>    <!-- Link to About :contentReference[oaicite:12]{index=12} -->
-        <li><a href="schedule.html">Schedule</a></li> <!-- Link to Schedule :contentReference[oaicite:13]{index=13} -->
-        <li><a href="contact.html">Contact</a></li>  <!-- Link to Contact :contentReference[oaicite:14]{index=14} -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main content housing the registration form -->
-  <main> <!-- Main landmark for assistive technologies :contentReference[oaicite:15]{index=15} -->
-    <form action="submit-registration.php" method="post" novalidate> <!-- novalidate allows custom validation handling :contentReference[oaicite:16]{index=16} -->
+  <main>
+    <form action="submit-registration.php" method="post">
       
-      <!-- Fieldset for personal information :contentReference[oaicite:17]{index=17} -->
+      <!-- Fieldset for personal information -->
       <fieldset>
-        <legend>Personal Information</legend> <!-- Provides context to grouped fields :contentReference[oaicite:18]{index=18} -->
+        <legend>Personal Information</legend>
 
-        <label for="fullname">Full Name</label> <!-- Descriptive label paired via for/id :contentReference[oaicite:19]{index=19} -->
+        <label for="fullname">Full Name *</label>
         <input
           type="text"
           id="fullname"
@@ -89,9 +158,9 @@
           required
           aria-required="true"
           placeholder="e.g., Jane Doe"
-        /> <!-- required and aria-required ensure validation and convey requirement to screen readers :contentReference[oaicite:20]{index=20} -->
+        />
 
-        <label for="email">Email Address</label> <!-- Explicit label for email field :contentReference[oaicite:21]{index=21} -->
+        <label for="email">Email Address *</label>
         <input
           type="email"
           id="email"
@@ -99,14 +168,14 @@
           required
           aria-required="true"
           placeholder="e.g., jane.doe@example.com"
-        /> <!-- type="email" triggers browser validation and mobile keyboards optimized for email entry :contentReference[oaicite:22]{index=22} -->
+        />
       </fieldset>
 
-      <!-- Fieldset for account security information :contentReference[oaicite:23]{index=23} -->
+      <!-- Fieldset for account security information -->
       <fieldset>
-        <legend>Account Security</legend> <!-- Contextual grouping for password fields :contentReference[oaicite:24]{index=24} -->
+        <legend>Account Security</legend>
 
-        <label for="password">Password</label> <!-- Label for password :contentReference[oaicite:25]{index=25} -->
+        <label for="password">Password *</label>
         <input
           type="password"
           id="password"
@@ -114,9 +183,9 @@
           required
           aria-required="true"
           placeholder="Enter a secure password"
-        /> <!-- type="password" masks input for privacy; required and aria-required used for accessibility :contentReference[oaicite:26]{index=26} -->
+        />
 
-        <label for="confirm-password">Confirm Password</label> <!-- Label for confirmation field :contentReference[oaicite:27]{index=27} -->
+        <label for="confirm-password">Confirm Password *</label>
         <input
           type="password"
           id="confirm-password"
@@ -124,13 +193,13 @@
           required
           aria-required="true"
           placeholder="Re-enter your password"
-        /> <!-- Matching field for confirmation with required validation :contentReference[oaicite:28]{index=28} -->
+        />
       </fieldset>
 
-      <!-- Terms and Conditions checkbox :contentReference[oaicite:29]{index=29} -->
+      <!-- Terms and Conditions checkbox -->
       <fieldset>
-        <legend>Terms and Conditions</legend> <!-- Grouping for terms agreement :contentReference[oaicite:30]{index=30} -->
-        <label>
+        <legend>Terms and Conditions</legend>
+        <label class="checkbox-label">
           <input
             type="checkbox"
             id="terms"
@@ -138,19 +207,18 @@
             required
             aria-required="true"
           />
-          I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>.
+          <span>I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>. *</span>
         </label>
-        <!-- Clearly describes what checking the box signifies; required and aria-required ensure assistive tech recognizes necessity :contentReference[oaicite:31]{index=31} -->
       </fieldset>
 
-      <!-- Submit button to finalize registration :contentReference[oaicite:32]{index=32} -->
-      <button type="submit">Register Now</button> <!-- A descriptive call-to-action button :contentReference[oaicite:33]{index=33} -->
+      <!-- Submit button to finalize registration -->
+      <button type="submit">Register Now</button>
     </form>
   </main>
 
   <!-- Footer with consistent copyright information -->
   <footer>
-    <p>© 2024 TechCon</p> <!-- Contentinfo landmark to signal end of content :contentReference[oaicite:34]{index=34} -->
+    <p>&copy; 2024 TechCon</p>
   </footer>
 </body>
 </html>
