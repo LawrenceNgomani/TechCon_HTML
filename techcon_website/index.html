@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechCon 2024</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon 2024 - Home</title>
 </head>
 <body>
-  <!-- Header with site title and navigation -->
-  <header>
-    <h1>TechCon 2024</h1> <!-- Primary heading for the conference page :contentReference[oaicite:9]{index=9} -->
-    <nav aria-label="Main Navigation"> <!-- Landmark navigation region :contentReference[oaicite:10]{index=10} -->
-      <ul>
-        <li><a href="about.html">About</a></li>           <!-- Link to About page :contentReference[oaicite:11]{index=11} -->
-        <li><a href="schedule.html">Schedule</a></li>     <!-- Link to Schedule page :contentReference[oaicite:12]{index=12} -->
-        <li><a href="register.html">Register</a></li>     <!-- Link to Register page :contentReference[oaicite:13]{index=13} -->
-        <li><a href="contact.html">Contact</a></li>       <!-- Link to Contact page :contentReference[oaicite:14]{index=14} -->
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Main section introducing the conference -->
-  <main> <!-- The main content landmark :contentReference[oaicite:15]{index=15} -->
-    <section>
-      <p>
-        Welcome to TechCon 2024, the premier conference bringing together innovators,
-        developers, and industry leaders to explore the latest advancements in technology.
-        Join us for two days of keynote presentations, hands-on workshops, and networking
-        opportunities.
-      </p>
-      <video controls width="640" poster="promo-poster.jpg"> <!-- Embeds promo video with controls  -->
-        <source src="promo-video.mp4" type="video/mp4" />    <!-- MP4 format source :contentReference[oaicite:17]{index=17} -->
-        <source src="promo-video.webm" type="video/webm" />  <!-- WebM format source :contentReference[oaicite:18]{index=18} -->
-        <track kind="subtitles" srclang="en" src="promo-subtitles.vtt" default /> <!-- WebVTT subtitles for accessibility  -->
-        <!-- Fallback text for browsers without HTML5 video support  -->
-        <p>Your browser does not support HTML5 video. You can
-          <a href="promo-video.mp4">download the video here</a>.
-        </p>
-      </video>
-    </section>
-  </main>
+    <!-- HEADER -->
+    <header>
+        <h1>TechCon 2024</h1>
 
-  <!-- Footer with copyright -->
-  <footer>
-    <p>© 2024 TechCon</p> <!-- Explicit copyright statement :contentReference[oaicite:21]{index=21} -->
-  </footer>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <section>
+            <h2>Welcome to TechCon 2024</h2>
+            <p>
+                TechCon 2024 is the leading global conference for innovators, developers, and
+                technology enthusiasts. Join us for inspiring talks, hands-on workshops, and 
+                groundbreaking showcases from leaders shaping the future of tech.
+            </p>
+
+            <!-- Embedded Promotional Video -->
+            <video width="640" controls>
+                <source src="promo.mp4" type="video/mp4">
+                Your browser does not support the video tag. 
+                A conference promotional video is shown here.
+            </video>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 TechCon Conference. All rights reserved. Copyright.</p>
+    </footer>
+
 </body>
 </html>
