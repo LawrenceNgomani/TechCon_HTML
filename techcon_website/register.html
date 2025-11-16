@@ -1,224 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register for TechCon 2024</title>
-  <style>
-    /* Basic focus indicator enhancement for keyboard navigation */
-    input:focus, textarea:focus, button:focus {
-      outline: 3px solid #0066cc;
-      outline-offset: 2px;
-    }
-    
-    /* Simple layout for form fields */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    
-    header {
-      background-color: #f4f4f4;
-      padding: 1rem;
-      border-bottom: 1px solid #ddd;
-    }
-    
-    header h1 {
-      margin: 0 0 1rem 0;
-    }
-    
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1rem;
-    }
-    
-    nav a {
-      text-decoration: none;
-      color: #0066cc;
-      padding: 0.5rem;
-    }
-    
-    nav a:hover {
-      text-decoration: underline;
-    }
-    
-    main {
-      padding: 2rem;
-    }
-    
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #fafafa;
-    }
-    
-    fieldset {
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      background-color: white;
-    }
-    
-    legend {
-      font-weight: bold;
-      padding: 0 0.5rem;
-      color: #333;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-    
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
-    
-    input[type="checkbox"] {
-      margin-right: 0.5rem;
-    }
-    
-    .checkbox-label {
-      display: flex;
-      align-items: flex-start;
-      font-weight: normal;
-    }
-    
-    button[type="submit"] {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      background-color: #0066cc;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%;
-      margin-top: 1rem;
-    }
-    
-    button[type="submit"]:hover {
-      background-color: #004999;
-    }
-    
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for TechCon 2024</title>
 </head>
 <body>
-  <!-- Header with page title and consistent navigation -->
-  <header>
-    <h1>Register for TechCon 2024</h1>
-    <nav aria-label="Main Navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Main content housing the registration form -->
-  <main>
-    <form action="submit-registration.php" method="post">
-      
-      <!-- Fieldset for personal information -->
-      <fieldset>
-        <legend>Personal Information</legend>
+    <!-- HEADER -->
+    <header>
+        <h1>Register for TechCon 2024</h1>
 
-        <label for="fullname">Full Name *</label>
-        <input
-          type="text"
-          id="fullname"
-          name="fullname"
-          required
-          aria-required="true"
-          placeholder="e.g., Jane Doe"
-        />
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="email">Email Address *</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          aria-required="true"
-          placeholder="e.g., jane.doe@example.com"
-        />
-      </fieldset>
+    <!-- MAIN CONTENT -->
+    <main>
 
-      <!-- Fieldset for account security information -->
-      <fieldset>
-        <legend>Account Security</legend>
+        <h2>Conference Registration Form</h2>
 
-        <label for="password">Password *</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          aria-required="true"
-          placeholder="Enter a secure password"
-        />
+        <form action="#" method="post">
 
-        <label for="confirm-password">Confirm Password *</label>
-        <input
-          type="password"
-          id="confirm-password"
-          name="confirm-password"
-          required
-          aria-required="true"
-          placeholder="Re-enter your password"
-        />
-      </fieldset>
+            <!-- Name Field -->
+            <div>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
 
-      <!-- Terms and Conditions checkbox -->
-      <fieldset>
-        <legend>Terms and Conditions</legend>
-        <label class="checkbox-label">
-          <input
-            type="checkbox"
-            id="terms"
-            name="terms"
-            required
-            aria-required="true"
-          />
-          <span>I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>. *</span>
-        </label>
-      </fieldset>
+            <!-- Email Field -->
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-      <!-- Submit button to finalize registration -->
-      <button type="submit">Register Now</button>
-    </form>
-  </main>
+            <!-- Password Field -->
+            <div>
+                <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
 
-  <!-- Footer with consistent copyright information -->
-  <footer>
-    <p>&copy; 2024 TechCon</p>
-  </footer>
+            <!-- Confirm Password Field -->
+            <div>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+
+            <!-- Terms and Conditions Checkbox -->
+            <div>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Register Now</button>
+
+        </form>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 TechCon Conference. All rights reserved. Copyright.</p>
+    </footer>
+
 </body>
 </html>
